@@ -1,5 +1,4 @@
 import React from "react";
-import intro from "./mods/intro";
 
 const WelcomePage = (props) => {
     return (
