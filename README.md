@@ -47,7 +47,7 @@ The application will have all configurations set up with the name `my-trails`. Y
 2. In the root of the `server` folder, create a `.env` file to hold the session secret. This will allow Passport to keep track of the currently signed-in user in session. Include a SESSION_SECRET in the `.env`:
 
    ```env
-   SESSION_SECRET="ff521741-6d5a-48d2-96a9-b95bbcf60bc4"
+   SESSION_SECRET=""
    ```
 
 3. Create your base PostgreSQL database. Check the `server/src/config/getDatabaseUrl` file for the name of the `development` database. For example:
