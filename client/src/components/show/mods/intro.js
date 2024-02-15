@@ -1,6 +1,6 @@
 import React from "react"
 
-const intro = () => {
+const Intro = () => {
     return(
         <p className="intro">
             My Trails is an app that shows hiking trails in your state,
@@ -8,4 +8,4 @@ const intro = () => {
         </p>
 )}
 
-export default intro
+export default Intro
