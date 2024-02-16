@@ -10,7 +10,7 @@ import WelcomePage from "./show/WelcomePage";
 import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
-import HikeShowPage from "./show/HikeShowPage";
+import TrailShowPage from "./show/TrailShowPage";
 import StateList from "./list/StateList";
 import StateShow from "./show/StateShowPage";
 
@@ -37,7 +37,7 @@ const App = (props) => {
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
-        <Route exact path="/trails" component={HikeShowPage} />
+        <Route exact path="/trails" component={TrailShowPage} />
         <Route exact path="/states" component={StateList} />
         <Route exact path="/states/:state" render={(props) => <StateShow {...props} />}/>
 

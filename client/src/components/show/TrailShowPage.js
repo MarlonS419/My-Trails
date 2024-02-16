@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TrailsShowPage = (props) => {
+const TrailShowPage = (props) => {
     const [trail, setTrail] = useState({})
 
     console.log(`this is the state: ${trail}`)
@@ -32,4 +32,4 @@ const TrailsShowPage = (props) => {
     )
 }
 
-export default TrailsShowPage
+export default TrailShowPage
