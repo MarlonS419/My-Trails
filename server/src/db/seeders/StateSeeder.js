@@ -1,3 +1,5 @@
+import { State } from "../../models/index.js";
+
 class StateSeeder {
     static async seed() {    
         const stateData = [
@@ -52,6 +54,13 @@ class StateSeeder {
             { name: 'Wisconsin' },
             { name: 'Wyoming' }
         ];
+
+        for(const state of stateData) {
+            const currentState = await State.query().findOne(state)
+            if (!currentState) {
+                await State.query().insert(state)
+            }
+        };
     };
 };
 

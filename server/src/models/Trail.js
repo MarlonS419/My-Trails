@@ -8,7 +8,7 @@ class Trail extends Model {
     static get jsonSchema () {
         return {
             type: "object",
-            require: [
+            required: [
                 "name",
                 "length"
             ],
