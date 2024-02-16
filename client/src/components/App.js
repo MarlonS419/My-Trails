@@ -14,6 +14,7 @@ import HikeShowPage from "./show/HikeShowPage";
 import StateList from "./list/StateList";
 import StateShow from "./show/StateShowPage";
 
+
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
   const fetchCurrentUser = async () => {
@@ -39,6 +40,7 @@ const App = (props) => {
         <Route exact path="/trails" component={HikeShowPage} />
         <Route exact path="/states" component={StateList} />
         <Route exact path="/states/:state" render={(props) => <StateShow {...props} />}/>
+
       </Switch>
     </Router>
   );
