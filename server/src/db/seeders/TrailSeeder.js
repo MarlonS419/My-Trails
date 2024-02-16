@@ -1,4 +1,4 @@
-import { State } from "../../models/index.js"
+import { State, Trail } from "../../models/index.js"
 
 class TrailSeeder {
     static async seed() {
@@ -17,5 +17,14 @@ class TrailSeeder {
                 length: '24'
             }
         ]
+
+        for(const trail of trailData) {
+            const currentTrail = await Trail.query().findOne(trail)
+            if (!currentTrail) {
+                await Trail.query().insert(trail)
+            }
+        };
     }
 }
+
+export default TrailSeeder

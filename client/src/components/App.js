@@ -10,7 +10,10 @@ import WelcomePage from "./show/WelcomePage";
 import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
-import TrailsShowPage from "./show/TrailsShowPage";
+import HikeShowPage from "./show/HikeShowPage";
+import StateList from "./list/StateList";
+import StateShow from "./show/StateShowPage";
+
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -34,7 +37,10 @@ const App = (props) => {
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
-        <Route exact path="/trails/:id" component={TrailsShowPage} />
+        <Route exact path="/trails" component={HikeShowPage} />
+        <Route exact path="/states" component={StateList} />
+        <Route exact path="/states/:state" render={(props) => <StateShow {...props} />}/>
+
       </Switch>
     </Router>
   );
