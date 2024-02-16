@@ -12,6 +12,7 @@ import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
 import HikeShowPage from "./show/HikeShowPage";
 import StateList from "./list/StateList";
+import StateShow from "./show/StateShowPage";
 
 const App = (props) => {
   const [currentUser, setCurrentUser] = useState(undefined);
@@ -37,6 +38,7 @@ const App = (props) => {
         <Route exact path="/user-sessions/new" component={SignInForm} />
         <Route exact path="/trails" component={HikeShowPage} />
         <Route exact path="/states" component={StateList} />
+        <Route exact path="/states/:state" render={(props) => <StateShow {...props} />}/>
       </Switch>
     </Router>
   );

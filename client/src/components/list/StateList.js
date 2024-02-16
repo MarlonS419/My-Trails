@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
+import StateTile from "./StateTile";
 
 const StateList = (props) => {
     const [currentState, setCurrentState] = useState([])
-    debugger
     const getStates = async () => {
         try {
             const response = await fetch("/api/v1/states/")
-            console.log(`this is the fetched response: ${response}`)
             const parsedResponse = await response.json()
-            console.log(`this is the parsed response: ${parsedResponse}`)
             setCurrentState(parsedResponse.states)
         } catch(error) {
             console.error(`Error Fetching State List: ${error}`)
@@ -19,10 +17,22 @@ const StateList = (props) => {
         getStates()
     }, [])
 
+    const stateTiles = currentState.map((state) => {
+        return (
+            <StateTile key={state.id} state={state} />
+        )
+    })
+
     return (
-        <div>
-            {currentState}
+        <div className="state-list-page">
+            <div className="state-list-intro">
+                <p>Hello from React!</p>
+                <ul className="state-list-tile">
+                    {stateTiles}
+                </ul>
+            </div>
         </div>
+
     )
 }
 
