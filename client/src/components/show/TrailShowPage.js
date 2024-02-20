@@ -14,9 +14,7 @@ const TrailShowPage = (props) => {
                 throw error
             }
             const body = await response.json()
-            console.log(`this is the body of the response: ${body}`)
             setTrail(body.trail)
-            console.log(`this is the trail in the body: ${body.trail}`)
         } catch (error) {
             console.log(error)
         }
