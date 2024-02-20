@@ -8,13 +8,10 @@ class Trail extends Model {
     static get jsonSchema () {
         return {
             type: "object",
-            required: [
-                "name",
-                "length"
-            ],
+            required: ["name"],
             properties: {
                 name: { type: "string" },
-                length: { type: [ "string", "integer" ] }
+                length: { type: ["string", "integer"] }
             }
         }
     }
