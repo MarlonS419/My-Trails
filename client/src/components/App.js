@@ -37,9 +37,9 @@ const App = (props) => {
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/users/new" component={RegistrationForm} />
         <Route exact path="/user-sessions/new" component={SignInForm} />
-        <Route exact path="/trails" component={TrailShowPage} />
+        <Route exact path="/trails/:id" render={(props) => <TrailShowPage {...props} />}/>
         <Route exact path="/states" component={StateList} />
-        <Route exact path="/states/:state" render={(props) => <StateShow {...props} />}/>
+        <Route exact path="/states/:id" render={(props) => <StateShow {...props} />}/>
 
       </Switch>
     </Router>

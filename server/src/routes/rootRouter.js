@@ -9,7 +9,6 @@ import statesRouter from "./api/v1/statesRouter.js";
 const rootRouter = new express.Router();
 
 rootRouter.use("/", clientRouter);
-// rootRouter.use("/api/v1/trails", trailsRouter);
 rootRouter.use("/api/v1/user-sessions", userSessionsRouter);
 rootRouter.use("/api/v1/users", usersRouter);
 rootRouter.use("/api/v1/states", statesRouter);

@@ -3,9 +3,10 @@ import { Trail } from "../../../models/index.js"
 
 const trailsRouter = new express.Router()
 
-// trailsRouter.get("/", async (req, res) => {
+// trailsRouter.get("/:id", async (req, res) => {
+//     const id = req.params.id
 //     try {
-//         const trailQuery = await Trail.query()
+//         const selectedTrail = await Trail.query()
 //         return res.status(200).json({ trail: trailQuery })
 //     } catch(error) {
 //         return res.status(500).json({ error: error })

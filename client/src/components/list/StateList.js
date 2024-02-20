@@ -26,8 +26,10 @@ const StateList = (props) => {
     return (
         <div className="state-list-page">
             <div className="state-list-intro">
-                <p>Hello from React!</p>
-                <ul className="state-list-tile">
+                <h1>Hello from React!</h1>
+            </div>
+            <div>
+                <ul className="state-list-tiles">
                     {stateTiles}
                 </ul>
             </div>
