@@ -13,6 +13,8 @@ import TopBar from "./layout/TopBar";
 import TrailShowPage from "./show/TrailShowPage";
 import StateList from "./list/StateList";
 import StateShow from "./show/StateShowPage";
+import AuthenticatedRoute from "./authentication/AuthenticatedRoute";
+import UserShow from "./show/UserShowPage";
 
 
 const App = (props) => {
@@ -40,7 +42,7 @@ const App = (props) => {
         <Route exact path="/trails/:id" render={(props) => <TrailShowPage {...props} />}/>
         <Route exact path="/states" component={StateList} />
         <Route exact path="/states/:id" render={(props) => <StateShow {...props} />}/>
-
+        <AuthenticatedRoute exact path="/profile" component={UserShow} user={currentUser}/>
       </Switch>
     </Router>
   );
