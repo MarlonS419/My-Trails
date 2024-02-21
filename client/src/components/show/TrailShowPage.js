@@ -26,7 +26,17 @@ const TrailShowPage = (props) => {
 
 
     return (
-        <p>Hello from Trail show page!</p>
+        <div>
+            <p>Hello from Trail show page!</p>
+            <p>
+                {trail.name}
+            </p>
+            <p>
+                {trail.state}
+            </p>
+
+        </div>
+
     )
 }
 

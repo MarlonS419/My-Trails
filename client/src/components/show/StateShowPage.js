@@ -4,7 +4,6 @@ import TrailList from "../list/TrailList.js";
 
 const StateShow = (props) => {
     const [state, setState] = useState({ trails: [] })
-    console.log(`this is state: ${state}`)
     const stateId = props.match.params.id
     
     const getState = async () => {
@@ -29,7 +28,7 @@ const StateShow = (props) => {
     return (
         <div className="state-show-page">
             <p>{state.name}!</p>
-            <TrailList trails={state.trails} />
+            <TrailList trails={state.trails} stateId={state.id} />
         </div>
             
     
