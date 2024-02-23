@@ -3,12 +3,13 @@ import StateTile from "./StateTile";
 
 const StateList = (props) => {
     const [currentState, setCurrentState] = useState([])
+
     const getStates = async () => {
         try {
             const response = await fetch("/api/v1/states/")
             const parsedResponse = await response.json()
             setCurrentState(parsedResponse.states)
-        } catch(error) {
+        } catch (error) {
             console.error(`Error Fetching State List: ${error}`)
         }
     }

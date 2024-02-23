@@ -3,7 +3,7 @@ import { State } from "../../models/index.js";
 class StateSeeder {
     static async seed() {    
         const stateData = [
-            { name: 'Alabama' },
+            { name: 'Alabama', location:[{lat: , lng: }] },
             { name: 'Alaska' },
             { name: 'Arizona' },
             { name: 'Arkansas' },
