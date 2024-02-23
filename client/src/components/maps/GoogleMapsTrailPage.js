@@ -7,7 +7,7 @@ const GoogleMapsTrailPage = (props) => {
     const [searchResults, setSearchResults] = useState([])
     const [error, setError] = useState("")
 
-    
+    console.log("this is the consoleLog:", searchResults)
     
     const loader = new Loader({
         apiKey: "AIzaSyASDgTQGEe-wAxQ0PDh93jGGp_TpvDdrUc",
@@ -20,7 +20,7 @@ const GoogleMapsTrailPage = (props) => {
             const ri = { lat: 41.580, lng: -71.477 };
             
             const request = {
-                query: "providence",
+                query: "ryan park",
                 location: ri,
                 radius: "500"
             };
@@ -47,6 +47,7 @@ const GoogleMapsTrailPage = (props) => {
                         const marker = new google.maps.Marker({
                             position: new google.maps.LatLng(result.geometry.location.lat(), result.geometry.location.lng()),
                             map: map,
+                            icon: result.photos[0].getUrl({maxWidth: 35, maxHeight: 35})
                         });
                         
                         marker.addListener("click", () => {
