@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import GoogleMapsTrailPage from "../maps/GoogleMapsTrailPage.js";
 
 const TrailShowPage = (props) => {
     const [trail, setTrail] = useState({})
@@ -34,7 +35,7 @@ const TrailShowPage = (props) => {
             <p>
                 {trail.state}
             </p>
-
+            <GoogleMapsTrailPage trail={trail}/>
         </div>
 
     )

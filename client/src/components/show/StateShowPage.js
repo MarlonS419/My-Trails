@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TrailList from "../list/TrailList.js";
+import GoogleMapsStatePage from "../maps/GoogleMapsStatePage.js";
 
 
 const StateShow = (props) => {
@@ -27,8 +28,9 @@ const StateShow = (props) => {
 
     return (
         <div className="state-show-page">
-            <p>{state.name}!</p>
+            <h1 className="state-title">{state.name}!</h1>
             <TrailList trails={state.trails} stateId={state.id} />
+            <GoogleMapsStatePage />
         </div>
             
     
