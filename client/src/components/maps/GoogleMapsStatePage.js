@@ -9,7 +9,7 @@ const GoogleMapsStatePage = (props) => {
     const [searchQuery, setSearchQuery] = useState("")
     const [searchResults, setSearchResults] = useState([])
     const [error, setError] = useState("")
-    
+
     const loader = new Loader({
         apiKey: "AIzaSyASDgTQGEe-wAxQ0PDh93jGGp_TpvDdrUc",
         libraries: ["places"]

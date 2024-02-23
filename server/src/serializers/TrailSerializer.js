@@ -1,7 +1,5 @@
-import StateSerializer from "../serializers/StateSerializer.js"
-import { State } from "../models/index.js"
-
 class TrailSerializer {
+
     static getTrailDetails(trails) {
         const allowedAttributes = ["id", "name", "length"]
 
@@ -12,6 +10,7 @@ class TrailSerializer {
             }
             return serializedTrail
         })
+
         return serializedTrails
     }
 
@@ -29,4 +28,5 @@ class TrailSerializer {
         return serializedTrail
     }
 }
+
 export default TrailSerializer
