@@ -1,74 +1,64 @@
-# Engage Boilerplate
+# My Trails
+
+My Trails is an interactive web application designed to enhance outdoor experiences by providing users with trail information, including location and user-generated content. This project aims to foster a community of trail enthusiasts by offering a platform where users can share their experiences and discover new trails.
+
+## Features
+
+- **User Authentication**: Allows users to create accounts, sign in, and sign out.
+- **Trail Information**: Information about each trail, including location, and user-generated content.
+- **User Wish-List**: Users can add trails to their wish list to keep track of the trails they are aiming towards.
+- **User Completed List**: Users can add hiked trails to their own completed list for easy review of what they have trekked so far.
 
 ## Installation
 
-For a copy of this repository please `Download ZIP` (found under the green `Code` button).
+To get a local copy of this project up and running, follow these steps:
 
-After unpacking the ZIP you can rename the folder/ directory for your new project.
+1. **Clone the Repository**:
+```  
+git clone https://github.com/MarlonS419/My-Trails.git
+```
+2. **Navigate to the Project Directory**:
+```
+cd My-Trails
+```
+3. **Install Dependencies**:
+```
+yarn install
+```
+4. **Set Up Environment Variables**:
+   - In the root of the `server` folder, create a `.env` file.
+   - Include a `SESSION_SECRET` for session management, e.g., `SESSION_SECRET="your_secret_here"`.
 
-### Rename Boilerplate
-
-The application will have all configurations set up with the name `my-trails`. You can change the name to match and be consistent with the name of your project. To do this, use a global search (using the Search magnifying glass in VSCode) to look for all instances of `my-trails` and replace it with the hyphenated name of your project (the search should find references to files with your database names, `package.json` files, etc.).
-
-## Adding to GitHub
-
-1. Initialize your project with GitHub in the terminal:
-
-   ```sh
-   git init
-   git add .
-   git commit -m "initial commit"
-   ```
-
-2. Create a new repository on your GitHub:
-
-   - From your GitHub page in the browser, click on the tab for `Repositories`, then click the green button for `New`
-   - Add a Repository name - for simplicity, you might use the same name that you chose for the project
-   - Select `Public` for the type of repository if you want others to see your work
-   - Skip any options that mention adding additional files (such as a README.md or .gitignore)
-   - Click `Create Repository`
-
-3. On the next page, you will see sets of terminal commands. Use the option to `push an existing repository from the command line`:
-
-   ```sh
-   git remote add origin <- use the provided URL to your repo on GitHub ->
-   git branch -M main
-   git push -u origin main
-   ```
+5. **Create the Development Database**:
+```
+createdb my-trails_development
+```
+6. **Run Migrations**:
+```
+cd server yarn migrate:latest
+```
+7. **Start the Application**:
+   - From the root folder, run:
+```
+yarn run dev
+```
+   - Navigate to `http://localhost:3000` in your web browser to see the application in action.
 
 ## Usage
 
-1. Install necessary dependencies with `yarn`:
+Once the application is running, you can sign up, sign in, and start exploring trails. Users can also add reviews and search for trails based on various criteria.
 
-   ```sh
-   yarn install
-   ```
+## Contributing
 
-2. In the root of the `server` folder, create a `.env` file to hold the session secret. This will allow Passport to keep track of the currently signed-in user in session. Include a SESSION_SECRET in the `.env`:
+Contributions are welcome! Please feel free to submit pull requests or open issues to improve the application.
 
-   ```env
-   SESSION_SECRET=""
-   ```
+## License
 
-3. Create your base PostgreSQL database. Check the `server/src/config/getDatabaseUrl` file for the name of the `development` database. For example:
+This project is open source, under the MIT License.
 
-   ```sh
-   createdb my-trails_development
-   ```
+## Acknowledgments
 
-4. Run the included `users` table migration:
+- Thanks to all contributors who have helped shape this project.
+- Special thanks to the trail community for their support and feedback.
 
-   ```sh
-   cd server
-   yarn migrate:latest
-   ```
-
-5. Start up the application, from the root folder:
-
-   ```sh
-   cd .. # if in the server folder
-
-   yarn run dev
-   ```
-
-6. Navigate to <http://localhost:3000>. You should see the text "Hello from react". Ensure you can sign up, sign in, and sign out users.
+---
